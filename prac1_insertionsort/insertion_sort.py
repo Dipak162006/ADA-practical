@@ -13,7 +13,11 @@ def insertion(a):
     
     return a
 
-arr=[4,7,2,3,1]
+arr=[]
+size=int(input("enter sizze of array:-"))
+
+for i in range(size):
+    arr+=input("enter number :-")
 
 print(insertion(arr))
 
