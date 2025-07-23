@@ -13,7 +13,7 @@ def bubblesort(a):
     return a
 
 arr=[]
-size=int(input("enter sizze of array:-"))
+size=int(input("enter size of array:-"))
 for i in range(size):
     arr.append(int(input("enter number :-")))
 print(bubblesort(arr))
