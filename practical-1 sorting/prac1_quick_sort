@@ -1,0 +1,28 @@
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+        quick_sort(arr, low, pi)
+        quick_sort(arr, pi + 1, high)
+
+def partition(arr, low, high):
+    mid = (low + high) // 2
+    pivot = arr[mid]
+    i = low
+    j = high
+
+    while i <= j:
+        while arr[i] < pivot:
+            i += 1
+        while arr[j] > pivot:
+            j -= 1
+        if i <= j:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+            j -= 1
+
+    return i - 1  
+
+
+arr = [9, 4, 7, 6, 3, 1, 5]
+quick_sort(arr, 0, len(arr) - 1)
+print("Sorted array:", arr)
