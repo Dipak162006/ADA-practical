@@ -1,4 +1,4 @@
-def heapify(a, n, i):
+def heapify(a, n, i):   
     while True:
         largest = i
         left = 2 * i + 1
