@@ -1,18 +1,17 @@
-# BFS Implementation in Python
 from collections import deque
 
 def bfs(graph, start):
-    visited = set()            # To track visited nodes
-    queue = deque([start])     # Initialize queue with starting node
+    visited = set()            
+    queue = deque([start])     
 
     while queue:
-        node = queue.popleft()  # Remove node from front of queue
+        node = queue.popleft()  
         if node not in visited:
-            print(node, end=" ")  # Process current node
-            visited.add(node)     # Mark as visited
-            queue.extend(graph[node])  # Add neighbors to queue
+            print(node, end=" ") 
+            visited.add(node)     
+            queue.extend(graph[node])  
 
-# Graph represented using adjacency list
+
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
@@ -22,6 +21,6 @@ graph = {
     'F': []
 }
 
-# Driver code
+
 print("BFS Traversal:")
 bfs(graph, 'A')
